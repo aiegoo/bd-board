@@ -1,0 +1,13 @@
+.tit {
+  width: 100%; max-width: 800px;
+  padding: 1rem; background-color: #f1f1f1;
+  text-align: center; font-size: 1.543m;
+  margin: 0 auto;
+}
+.wrap {
+width: 100%; max-width: 800px; margin-top: 2rem;
+margin: 0 auto;
+}
+.wrap > li {
+  padding: 4px;
+}

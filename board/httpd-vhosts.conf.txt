@@ -1,0 +1,48 @@
+아래 내용중에서 제가 수정한 부분은 ?# 로 표시한 부분입니다. 선생님께는.txt 파일로 보내 드리지만 원본 파일은 httpd-vhosts.conf로 해당 경로에 저장하였습니다.
+
+# Virtual Hosts
+#
+# Required modules: mod_log_config
+
+# If you want to maintain multiple domains/hostnames on your
+# machine you can setup VirtualHost containers for them. Most configurations
+# use only name-based virtual hosts so the server doesn't need to worry about
+# IP addresses. This is indicated by the asterisks in the directives below.
+#
+# Please see the documentation at 
+# <URL:http://httpd.apache.org/docs/2.4/vhosts/>
+# for further details before you try to setup virtual hosts.
+#
+# You may use the command line option '-S' to verify your virtual host
+# configuration.
+
+#
+# Use name-based virtual hosting.
+#
+NameVirtualHost *:80
+<VirtualHost *:80> DocumentRoot "/xampp/htdocs" ServerName localhost </VirtualHost>
+#
+# VirtualHost example:
+# Almost any Apache directive may go into a VirtualHost container.
+# The first VirtualHost section is used for all requests that do not
+# match a ##ServerName or ##ServerAlias in any <VirtualHost> block.
+#
+##<VirtualHost *:80>
+    ##ServerAdmin webmaster@dummy-host.example.com
+    ##DocumentRoot "C:/xampp/htdocs/dummy-host.example.com"
+    ##ServerName dummy-host.example.com
+    ##ServerAlias www.dummy-host.example.com
+    ##ErrorLog "logs/dummy-host.example.com-error.log"
+    ##CustomLog "logs/dummy-host.example.com-access.log" common
+##</VirtualHost>
+
+##<VirtualHost *:80>
+    ##ServerAdmin webmaster@dummy-host2.example.com
+    ##DocumentRoot "C:/xampp/htdocs/dummy-host2.example.com"
+    ##ServerName dummy-host2.example.com
+    ##ErrorLog "logs/dummy-host2.example.com-error.log"
+    ##CustomLog "logs/dummy-host2.example.com-access.log" common
+##</VirtualHost>
+<VirtualHost *:80> DocumentRoot "D:/repo/phpbook/board/www/" ServerName blog ErrorLog "logs/blog.uzuro.com-error.log" CustomLog "logs/blog.uzuro.com-access.log" common <Directory "D:/repo/phpbook/board/www/"> Options Indexes Includes execCGI AllowOverride All Require all granted </Directory> </VirtualHost>
+
+
